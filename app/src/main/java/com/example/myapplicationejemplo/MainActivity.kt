@@ -5,11 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplicationejemplo.ui.theme.MyApplicationEjemploTheme
 
@@ -21,7 +23,7 @@ class MainActivity : ComponentActivity() {
             MyApplicationEjemploTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
                     Greeting(
-                        name = "WORLD",
+                        name = "Enrique Diaz",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -33,8 +35,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "HELLO $name!",
-        modifier = modifier
+        text = "Hola, $name!\nAplicaciones Moviles",
+        modifier = modifier.fillMaxWidth(),
+        textAlign = TextAlign.Center
     )
 }
 
@@ -42,6 +45,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     MyApplicationEjemploTheme {
-        Greeting("WORLD")
+        Greeting("Android")
     }
 }
